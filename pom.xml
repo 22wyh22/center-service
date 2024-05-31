@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.wyh</groupId>
+    <artifactId>center-service</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <modules>
+        <module>center-starter</module>
+        <module>center-application</module>
+        <module>center-common</module>
+        <module>center-domain</module>
+        <module>center-infrastructure</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceDirectory>UTF-8</project.build.sourceDirectory>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <center.version>1.0.0</center.version>
+        <spring-boot.version>2.7.9</spring-boot.version>
+        <druid.version>1.2.5</druid.version>
+        <mysql-version>8.0.30</mysql-version>
+        <mybatis-plus-version>3.5.2</mybatis-plus-version>
+        <redis-factory.version>2.0.2</redis-factory.version>
+        <elasticsearch-factory.version>1.0.0</elasticsearch-factory.version>
+        <fastjson.version>1.2.83</fastjson.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
+        <commons.lang3.version>3.12.0</commons.lang3.version>
+        <java-jwt.version>4.0.0</java-jwt.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot.version}</version>
+                <scope>test</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.junit.vintage</groupId>
+                        <artifactId>junit-vintage-engine</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wyh</groupId>
+                <artifactId>center-starter</artifactId>
+                <version>${center.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wyh</groupId>
+                <artifactId>center-application</artifactId>
+                <version>${center.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wyh</groupId>
+                <artifactId>center-common</artifactId>
+                <version>${center.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wyh</groupId>
+                <artifactId>center-domain</artifactId>
+                <version>${center.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wyh</groupId>
+                <artifactId>center-infrastructure</artifactId>
+                <version>${center.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-autoconfigure</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <scope>runtime</scope>
+                <version>${mysql-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus-version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.wyh</groupId>
+                <artifactId>redis-factory</artifactId>
+                <version>${redis-factory.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wyh</groupId>
+                <artifactId>elasticsreach-factory</artifactId>
+                <version>${elasticsearch-factory.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons.lang3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.auth0</groupId>
+                <artifactId>java-jwt</artifactId>
+                <version>${java-jwt.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
