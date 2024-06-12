@@ -13,12 +13,12 @@ import com.wyh.infrastructure.assembler.UserDTOAssembler;
 import com.wyh.infrastructure.po.UserPO;
 import com.wyh.infrastructure.repository.UserPORepository;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-@Component
+@Repository
 public class LoginUserTokenRepositoryImpl implements LoginUserTokenRepository {
 
     private final RedisTemplate<String, Object> redisTemplate;

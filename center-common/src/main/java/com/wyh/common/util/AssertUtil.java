@@ -11,6 +11,11 @@ public final class AssertUtil {
             throw new BizException(error);
         }
     }
+    public static void notNull(Object input, ErrorCode error, String message){
+        if(null == input){
+            throw new BizException(error,message);
+        }
+    }
 
     public static void notEmptyList(List input, ErrorCode error){
         if(null == input || input.isEmpty()){

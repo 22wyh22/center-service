@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-05-29T20:15:21+0800",
+    date = "2024-06-11T08:58:05+0800",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 1.8.0_151 (Oracle Corporation)"
 )
 public class UserDTOMapperImpl implements UserDTOMapper {
