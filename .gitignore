@@ -7,3 +7,6 @@
 
 ### log ###
 logs
+
+center-starter/hs_err_pid*
+center-starter/replay_pid*
